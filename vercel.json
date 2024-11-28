@@ -1,16 +1,15 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "/index.js",
-        "use": "@vercel/next"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/"
-      }
-    ]
-  }
-  
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",  // Ganti dengan nama file entry point Express Anda (misalnya, index.js)
+      "use": "@vercel/node"  // Menggunakan builder untuk Node.js
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"  // Semua rute akan diarahkan ke file index.js
+    }
+  ]
+}
